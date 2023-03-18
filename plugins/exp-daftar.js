@@ -49,9 +49,9 @@ rows: [
 ]
 
 const listMessage = {
-  text: `│›Please select your age at the bottom button...`,
-  footer: `┗ *ʏᴏᴜʀ ɴᴀᴍᴇ:* ${conn.getName(m.sender)}\n<❔>  BOT PRIVATE\n⚘ ᴄʀᴇᴀᴛᴇ ʙʏ ${wm}`,
-  title: "▢━━━━「 Registration 」━━━━▢",
+  text: `Silahkan Pilih Umur Kamu...`,
+  footer: `┗ *Your Name:* ${conn.getName(m.sender)}\n<❔>  RPG Botz\nBy ${wm}`,
+  title: "「 Registration 」",
   buttonText: "Click Here!",
   sections
 }
@@ -80,9 +80,7 @@ let ucp = `
 │▸ *sɴ:* ${sn}
 ╰═┅═━––––––๑
 
-ᴅᴀᴛᴀ ᴜsᴇʀ ʏᴀɴɢ ᴛᴇʀsɪᴍᴘᴀɴ ᴅɪᴅᴀᴛᴀʙᴀsᴇ ʙᴏᴛ, ᴅɪᴊᴀᴍɪɴ ᴀᴍᴀɴ ᴛᴀɴᴘᴀ ᴛᴇʀsʜᴀʀᴇ (. ❛ ᴗ ❛.)
-
-ꜱᴜʙꜱᴄʀɪʙᴇ ʏᴛ: ZYKOBOTZ MD
+ᴅᴀᴛᴀ ᴜsᴇʀ ʏᴀɴɢ ᴛᴇʀsɪᴍᴘᴀɴ ᴅɪᴅᴀᴛᴀʙᴀsᴇ ʙᴏᴛ, ᴅɪᴊᴀᴍɪɴ ᴀᴍᴀɴ ᴛᴀɴᴘᴀ ᴛᴇʀsʜᴀʀᴇ
 
 ${botdate}`
   let buttonMessage= {
@@ -100,13 +98,13 @@ ${botdate}`
 'previewType':'pdf',
 'title':global.titlebot,
 'body':global.titlebot,
-'thumbnail':await(await fetch('https://telegra.ph/file/ed3b4ac35fb14a4005447.jpg')).buffer(),
+'thumbnail':await(await fetch('https://telegra.ph/file/33b63025e62b6e103480b.jpg')).buffer(),
 'sourceUrl':'https://youtu.be/E1Cb97Rb-8U'}},
 'caption':cap,
 'footer':ucp,
 'buttons':[
-{'buttonId':'.menu','buttonText':{'displayText':'ᴍᴇɴᴜ'},'type':1},
-{'buttonId':'.donasi','buttonText':{'displayText':'ᴅᴏɴᴀsɪ'},'type':1}
+{'buttonId':'.menu','buttonText':{'displayText':'Menu'},'type':1},
+{'buttonId':'.donasi','buttonText':{'displayText':'Donate'},'type':1}
 ],
 'headerType':6}
     await conn.sendMessage(m.chat,buttonMessage, { quoted:m})

@@ -23,32 +23,30 @@ let teksnomor = (
 //------------ BIO
 let ppown = await conn.profilePictureUrl(nomorown + '@s.whatsapp.net', 'image').catch(_ => hwaifu[1])
 let teksbio = `
-┆⫹⫺ 💌 Nama : Zyko MD
+┆⫹⫺ 💌 Nama : Ryan Aditya
 ┆⫹⫺ ♂️ Gender : Pria
-┆⫹⫺ 🕋 Agama : Islam
-┆⫹⫺ ⏰ Tanggal lahir : 21 12 2004
-┆⫹⫺ 🎨 Umur : 18
-┆⫹⫺ 🧮 Kelas : XI
-┆⫹⫺ 🧩 Hobby : Modifikasi Perangkat Lunak
-┆⫹⫺ 💬 Sifat : ASIK,BAIK,RAMAH
-┆⫹⫺ 🗺️ Tinggal : Indonesia, Sukabumi
+┆⫹⫺  -  Agama : Private
+┆⫹⫺ ⏰ Tanggal lahir : 12 - 08 z- 1997
+┆⫹⫺ 🎨 Umur : 25
+┆⫹⫺ 🧩 Hobby : Modifikasi,Main Epep,Turu
+┆⫹⫺ 💬 Sifat : Sok Baik
+┆⫹⫺ 🗺️ Tinggal : Indonesia, Bandung
 ┆⫹⫺ ${sig}
 └––––––––––––·•
 `
 let ppown2 = await conn.profilePictureUrl(nomorown1 + '@s.whatsapp.net', 'image').catch(_ => hwaifu[1]) 
-let teksbio2 = `┆⫹⫺ 💌 Nama : Lisa Amelia
-┆⫹⫺ ♂️ Gender : Wanita
-┆⫹⫺ 🕋 Agama : Islam
-┆⫹⫺ ⏰ Tanggal lahir : 27 - 02- 2006
-┆⫹⫺ 🎨 Umur : 17
-┆⫹⫺ 🧮 Kelas : XI
+let teksbio2 = `┆⫹⫺ 💌 Nama : Ferdy Firmansyah
+┆⫹⫺ ♂️ Gender : Pria
+┆⫹⫺ 🕋 Agama : Private
+┆⫹⫺ ⏰ Tanggal lahir : 12 - 06 - 2000
+┆⫹⫺ 🎨 Umur : 23
 ┆⫹⫺ 🧩 Hobby : Banyak
-┆⫹⫺ 💬 Sifat : ASIK,BAIK,RAMAH
+┆⫹⫺ 💬 Sifat : Ga tau
 ┆⫹⫺ 🗺️ Tinggal : Indonesia, Bogor
 ┆⫹⫺ ${sigpcr}
 └––––––––––––·•
 `
-  let tek = `⟣⟞⟚⟝ 〨⎣ *Nᴏᴛᴇ* ⎤〨 ⟞⟚⟝⟢
+  let tek = `*Note*
 ┆
 𐚀 Owner Tidak Respon Chat Aneh
 𐚀 Owner Berhak Blcok Siapa Saja
@@ -59,21 +57,21 @@ let teksbio2 = `┆⫹⫺ 💌 Nama : Lisa Amelia
 𐚀 Call Blcok\n⫹ Ketik *.rules* Untuk Melihat Rules Selengkapnya⫺`
 const sections = 
 [{
-title: `⫹⫺ OTHER ⫹⫺`,
+title: `Other`,
 rows: [
 {title: "⸙ Kontak", rowId: ".owner kontak"},
 {title: "⸙ Nomor", rowId: ".owner nomor"},
-{title: "⸙ Biodata Zyko MD", rowId: ".owner bio"},
-{title: "⸙ Biodata Lisa Amelia", rowId: ".owner bio2"},
+{title: "⸙ Biodata Ryann", rowId: ".owner bio"},
+{title: "⸙ Biodata Ferdy", rowId: ".owner bio2"},
 {title: "⸙ Pengembang", rowId: ".zykomods"},
 {title: "⸙ Creator", rowId: ".zykomods1"},
 {title: "⸙ Script", rowId: ".sc"},
 ]}, {
-title: `⬔ SUPPORT ME ⬔`,
+title: `Support Me`,
 rows: [
-{title: "〠 Donasi", rowId: ".owner nomor"},
-{title: "〠 Sewa", rowId: ".sewa"},
-{title: "〠 Buy Premium", rowId: ".premium"},
+{title: "Donasi", rowId: ".owner nomor"},
+{title: "Sewa", rowId: ".sewa"},
+{title: "Buy Premium", rowId: ".premium"},
 ]},]
 const listMessage = {
   text: tek,
@@ -97,8 +95,8 @@ await conn.sendMessage(m.chat, { contacts: { displayName: wm, contacts: [{ vcard
                 ['Sewa Bot', `${usedPrefix}sewa`],
                 ['Menu', `${usedPrefix}menu`]
             ], m, { contextInfo: { mentionedJid: [nomorown] }})*/
- conn.send2ButtonImg(m.chat, fs.readFileSync('./media/menu.jpg').buffer, teksnomor, `Halo ${tag}\nIᴛᴜ Oᴡɴᴇʀ Kᴜ⫺⫰⫹\n` + botdate, `Sewa Bot`, `.sewa`, 'Menu', `.menu`, ftroli, { contextInfo: { externalAdReply: { showAdAttribution: true,
-    mediaUrl: 'https://instagram.com/kabulsaputra21',
+ conn.send2ButtonImg(m.chat, fs.readFileSync('./media/menu.jpg').buffer, teksnomor, `Halo ${tag}\nitu owner ku\n` + botdate, `Sewa Bot`, `.sewa`, 'Menu', `.menu`, ftroli, { contextInfo: { externalAdReply: { showAdAttribution: true,
+    mediaUrl: 'https://instagram.com/',
     mediaType: 2, 
     description: sgc,
     title: "Join Sini Juga Cuy!",
@@ -111,7 +109,7 @@ await conn.sendMessage(m.chat, { contacts: { displayName: wm, contacts: [{ vcard
             case 'bio':
           //conn.sendHydrated(m.chat, teksbio, wm, ppown, sig, "📷 Instagram", nomorown, '🌹 Nomor', [[null, null], [null, null],[null,null]], m)
 
-   conn.sendButton(m.chat, '┍┈༺ *BioData ZykoMD* ༻', teksbio, ppown, [
+   conn.sendButton(m.chat, '┍┈༺ *BioData Ryan* ༻', teksbio, ppown, [
                 ['Sewa', `${usedPrefix}sewa`],
                 ['Menu', `${usedPrefix}menu`]
             ], m)
@@ -119,7 +117,7 @@ await conn.sendMessage(m.chat, { contacts: { displayName: wm, contacts: [{ vcard
                         case 'bio2':
           //conn.sendHydrated(m.chat, teksbio, wm, ppown, sig, "📷 Instagram", nomorown, '🌹 Nomor', [[null, null], [null, null],[null,null]], m)
 
-          conn.sendButton(m.chat, '┍┈༺ *BioData LisaAmelia* ༻', teksbio2, ppown2, [
+          conn.sendButton(m.chat, '┍┈༺ *BioData Ferdy* ༻', teksbio2, ppown2, [
                 ['Sewa', `${usedPrefix}sewa`],
                 ['Menu', `${usedPrefix}menu`]
             ], m)
